@@ -24,6 +24,21 @@ const ProdReq = () => {
   const status_active = () => {
     setStatus('New')
   }
+  const Rejectprod = async(elem)=>{
+    await Axios.post('/request/removeprodreq',{
+      products:elem.product._id,
+      sellers:elem.seller._id
+    }).then((res)=>{
+      toast.success(res.data.message)
+      setRequests(res.data.requests)
+
+     
+      console.log(res)
+    }).catch((error)=>{
+      console.log(error)
+
+    })
+  }
 
   const Acceptprod = async(elem)=>{
     await Axios.post('/request/addprod',{
@@ -38,6 +53,7 @@ const ProdReq = () => {
 
     })
   }
+ 
 
 
   const getdata = async () => {
@@ -127,8 +143,8 @@ const ProdReq = () => {
                       <hr />
   
                       <div className=" flex  justify-between items-center">
-                         <button className='px-5 py-2 rounded-md bg-red-300 hover:bg-[#ff8989]'>Reject</button>
-                         <button onClick={()=>{ Acceptprod(elem) }} className='px-5 py-2 rounded-md bg-code-primary hover:bg-[#01407a] text-white'>Accept</button>
+                         <button onClick={()=>{Rejectprod(elem)}} className='px-5 py-2 rounded-md bg-red-300 hover:bg-[#ff8989] text-white'>Rejct</button>
+                         <button onClick={()=>{Acceptprod(elem)}} className='px-5 py-2 rounded-md bg-code-primary hover:bg-[#01407a] text-white'>Accept</button>
                       </div>
                     </div>
                   </div>
