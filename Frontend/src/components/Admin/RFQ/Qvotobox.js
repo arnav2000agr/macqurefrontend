@@ -1,11 +1,11 @@
-import axios from "axios";
+
 import React, { useState, Fragment, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import img from "../../../images/Vector.png";
 import rac from "./rfqimg/rac.png"
 import { FiSearch } from 'react-icons/fi'
 import { Checkbox } from "@material-tailwind/react";
-import { Axios } from '../../Axios'
+import  {Axios}  from '../../Axios'
 
 
 
@@ -77,7 +77,10 @@ export default function Qvotobox({ elem, id ,setStatus }) {
 			setShowModal(false)
 			setStatus('active')
 		}).catch((err)=>{
+			console.log(id)
+			console.log(sendarr)
 			console.log(err)
+
 		})
 	  }
 

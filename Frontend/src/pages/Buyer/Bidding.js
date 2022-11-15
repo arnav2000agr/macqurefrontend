@@ -40,8 +40,8 @@ const Bidding = () => {
 
             try {
 
-                await Axios.get('/getall/buyer/bids').then((res) => {
-                    setBids(res.data.buyerbids.bids)
+                await Axios.get('/getall/seller/bids').then((res) => {
+                    setBids(res.data.sellerbids.bids)
                 })
 
             } catch (error) {
