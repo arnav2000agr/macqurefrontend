@@ -2,8 +2,8 @@ import axios from 'axios'
 
 export const Axios = axios.create({
   withCredentials: true,
-  // baseURL: 'https://maqure.65.2.77.116.nip.io',
-  baseURL: 'http://localhost:5000',
+  baseURL: 'https://maqure.65.2.77.116.nip.io',
+  // baseURL: 'http://localhost:5000',
   headers: {
     "Content-Type": "application/json"
   },
