@@ -34,7 +34,7 @@ const SellerBidBox = ({ e }) => {
             <div className="w-[50%] left ">
               <div className="">
                 <h2 className="text-[28px]  text-2xl ml-8 pt-8 font-[500]">
-                  Quoto Your Price
+                  Quote Your Price
                 </h2>
                 <p className="text-[#637F94] font-[400] text-[16px] text-2xl ml-8 mt-2">
                   Let the buyer know about the price that are willing to charge for
@@ -58,7 +58,7 @@ const SellerBidBox = ({ e }) => {
                 onClick={() =>{ giveprice(e._id); setPopUp(false)}}
                 className="w-[156px] h-[52px] bg-[#1672DE] ml-8 text-[16px] font-[600] mt-10 text-[#F6F6F6]"
               >
-                Quoto Now
+                Quote Now
               </button>
             </div>
             <div className="right">

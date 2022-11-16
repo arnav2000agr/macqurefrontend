@@ -42,7 +42,7 @@ export default function History() {
 
 					<div className="total_amount">
 						<p>Total Shipment</p>
-						<h2>15000</h2>
+						<h2>16000</h2>
 					</div>
 				</div>
 				<div className="track_mid mt-6">
