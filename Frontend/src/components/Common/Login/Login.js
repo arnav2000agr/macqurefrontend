@@ -60,10 +60,12 @@ const Login = () => {
     const select_seller = (e) => {
         e.preventDefault();
         setByer(false)
+     
     }
     const select_byer = (e) => {
         e.preventDefault();
         setByer(true)
+        
     }
   
 

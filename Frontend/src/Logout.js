@@ -6,6 +6,8 @@ const Logout = () => {
     const logout = () => {
         Axios.get(`logout/buyer`).then((req, res) => {
           store.dispatch({type: 'UserReq'})
+          localStorage.removeItem("bid_define")
+          console.log("out")
           
             // toast.success(res.data.message)
         }).catch((error) => {

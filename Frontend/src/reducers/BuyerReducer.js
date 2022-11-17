@@ -6,6 +6,7 @@ export const BuyerReducer = (state= {user:{}},action)=>{
                 loading:true,
                 user : {},
                 isAuthenticated:false
+                
             }
         }
         case 'LoginSuccess' : {

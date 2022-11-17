@@ -32,7 +32,7 @@ const Navbar = ({ role }) => {
   const { user } = useSelector(state => state.user)
 
   return (
-    <div className='navbar   h-screen overflow-y-scroll flex flex-col justify-between text-base px-2'>
+    <div className='navbar h-screen overflow-y-scroll flex flex-col justify-between text-base px-2'>
       <nav className=' mt-24'>
         <div>
           {role !== 'admin' &&

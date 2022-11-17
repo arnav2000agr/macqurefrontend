@@ -13,12 +13,7 @@ import Logout from '../Logout'
 
 const OnBoardHeader = ({setShowModal}) => {
    
-const section1 = document.querySelector('.header')
 
-window.addEventListener('scroll', () => {
-  section1.style.backgroundColor = 'white'
-  section1.style.border='4px'
-})
 
 
     const { isAuthenticated } = useSelector(state => state.user)
@@ -39,14 +34,14 @@ window.addEventListener('scroll', () => {
     // const navigate = useNavigate()
     return (
         <div >
-            <div className="header flex justify-between px-14 items-center py-2 mb-6 fixed w-full left-0 top-0  z-40">
+            <div className=" flex justify-between px-14 items-center py-2 mb-6 fixed w-full left-0 top-0  z-40">
                 <NavLink to={'/'} className={({ isActive }) => (isActive ? 'active-link' : '')}><img src={logo} alt="" /></NavLink>
                 <ul className="flex gap-6 py-2">
-                    <NavLink to={'/'} className={({ isActive }) => (isActive ? 'active-link' : '')}><li  className="nav text-lg font-semibold  px-2 py-1 text-[#004AA2]">Home</li></NavLink>
+                    <NavLink to={'/'} className={({ isActive }) => (isActive ? 'active-link' : '')}><li  className=" text-lg font-semibold  px-2 py-1 text-[#004AA2]">Home</li></NavLink>
 
                     <li className="nav text-lg font-semibold px-2 py-1">What do we do ? </li>
 
-                    <NavLink className={({ isActive }) => (isActive ? 'active-link' : '')} to={'/onboard'}><li className="nav text-lg font-semibold px-2 py-1">Sellers</li></NavLink>
+                    <NavLink className={({ isActive }) => (isActive ? 'active-link' : '')} to={'/onboard'}><li className="text-lg font-semibold px-2 py-1">Sellers</li></NavLink>
 
                     <li className="nav text-lg font-semibold px-2 py-1">About Us</li>
 

@@ -11,11 +11,13 @@ const Floating = () => {
     const select_seller = (e)=>{
         e.preventDefault();
         navigate('/login/seller')
+        localStorage.setItem("seller","true")
         setByer(false)
     }
     const select_byer = (e)=>{
         e.preventDefault();
         navigate('/login')
+        localStorage.setItem("buyer","true")
         setByer(true)
     }
     return (

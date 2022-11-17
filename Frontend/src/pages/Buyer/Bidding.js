@@ -31,6 +31,8 @@ const Bidding = () => {
     const status_previous = () => {
         setStatus('previous')
     }
+    
+
 
 
     useEffect(() => {
@@ -39,10 +41,20 @@ const Bidding = () => {
         const getdata = async () => {
 
             try {
-
+                if(localStorage.getItem("bid_define")=="buyer")
+                {
+                    await Axios.get('/getall/buyer/bids').then((res)=>{
+                        console.log(res.data.buyerbids.bids);
+                        setBids(res.data.buyerbids.bids);
+                    })
+                }
+                else{
                 await Axios.get('/getall/seller/bids').then((res) => {
+                    console.log(res.data.sellerbids.bids)
                     setBids(res.data.sellerbids.bids)
+                
                 })
+            }
 
             } catch (error) {
                 console.log(error);

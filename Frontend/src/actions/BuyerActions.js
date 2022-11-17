@@ -16,7 +16,7 @@ export const loginbuyeraction = (email , password) => async(dispatch)=>{
     })
 
   
-  
+  localStorage.setItem("bid_define","buyer")
     toast.success('Login Success')
 
    } catch (error) {
@@ -75,6 +75,7 @@ export const loginselleraction = (email , password) => async(dispatch)=>{
         type:'LoginSuccess',
         payload : data.user
     })
+    localStorage.setItem("bid_define","seller")
 
 
 

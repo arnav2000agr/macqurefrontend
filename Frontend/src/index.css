@@ -225,61 +225,9 @@ body {
   background: linear-gradient(90.31deg, rgba(22, 114, 222, 0.15) -2.61%, rgba(222, 22, 214, 0.15) 100.28%);
 
 }
-.header{
-  /* background: transparent; */
-
-}
 
 
-.nav {
-  display: inline-block;
-  position: relative;
-  
-}
 
-.nav:after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: 
-#0087ca;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
-}
-
-.nav:hover:after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
-
-.signup span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
-
-.signup span:after {
-  content: '\00bb';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
-}
-
-.signup:hover span {
-  padding-right: 25px;
-}
-
-.signup:hover span:after {
-  opacity: 1;
-  right: 0;
-}
 
 
 
